@@ -1,3 +1,5 @@
+
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -132,11 +134,10 @@ class Selenium():
 
 
 
-soLuong = input(int("Số Tab Chrome:"))
+soLuong = int(input("Số Tab Chrome:"))
 for k in range(soLuong):
     time.sleep(5)
     App = Selenium(k)
     print(f'[=]{k}...........')
     x = threading.Thread(target = App.Dulingo ,args = (k,))
     x.start()
-
