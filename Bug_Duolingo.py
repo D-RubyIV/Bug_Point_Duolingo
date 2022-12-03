@@ -132,11 +132,11 @@ class Selenium():
 
 
 
-def Main():
-    for k in range(14):
-        time.sleep(5)
-        App = Selenium(k)
-        print(f'[=]{k}...........')
-        x = threading.Thread(target = App.Dulingo ,args = (k,))
-        x.start()
-Main()
+soLuong = input(int("Số Tab Chrome:"))
+for k in range(soLuong):
+    time.sleep(5)
+    App = Selenium(k)
+    print(f'[=]{k}...........')
+    x = threading.Thread(target = App.Dulingo ,args = (k,))
+    x.start()
+
